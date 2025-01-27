@@ -1,28 +1,173 @@
-# AgendaCompromisso1
+# 📅 Agenda de Compromissos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+<div align="center">
 
-## Development server
+![Badge Nome](https://img.shields.io/badge/Nome-Valor-cor)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-## Code scaffolding
+</div>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Uma aplicação web completa para gerenciamento de compromissos, desenvolvida com Angular no frontend e Java Spring Boot no backend. O sistema permite que usuários gerenciem seus compromissos de forma eficiente e intuitiva.
 
-## Build
+## 🚀 Tecnologias Utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Frontend
+- Angular 16
+- TypeScript
+- Angular Material
+- RxJS
+- SCSS
 
-## Running unit tests
+### Backend
+- Java 17
+- Spring Boot 3
+- Spring Security
+- Spring Data JPA
+- PostgreSQL
+- Maven
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### DevOps
+- Docker
+- Docker Compose
+- AWS EC2
+- Nginx
 
-## Running end-to-end tests
+## 📋 Funcionalidades
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Autenticação e autorização de usuários
+- CRUD completo de compromissos
+- Filtros de busca por data, título e status
+- Notificações de compromissos próximos
+- Interface responsiva e moderna
+- Persistência de dados em PostgreSQL
+- Deploy automatizado na AWS
 
-## Further help
+## 🛠️ Estrutura do Projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# agenda-compromisso1
+```
+├── frontend/
+│   ├── src/
+│   ├── Dockerfile
+│   └── package.json
+├── backend/
+│   ├── src/
+│   ├── pom.xml
+│   └── Dockerfile
+├── docker-compose.yml
+├── nginx/
+│   └── nginx.conf
+└── README.md
+```
+
+## 💻 Pré-requisitos
+
+- Node.js 18+
+- Java JDK 17
+- Docker e Docker Compose
+- Maven
+- PostgreSQL (para desenvolvimento local)
+
+## 🔧 Instalação e Execução Local
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/agenda-compromissos.git
+cd agenda-compromissos
+```
+
+2. Configure as variáveis de ambiente:
+```bash
+cp .env.example .env
+# Edite o arquivo .env com suas configurações
+```
+
+3. Execute com Docker Compose:
+```bash
+docker-compose up -d
+```
+
+A aplicação estará disponível em `http://localhost:80`
+
+### Execução sem Docker
+
+#### Backend
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+#### Frontend
+```bash
+cd frontend
+npm install
+ng serve
+```
+
+## 📦 Deploy na AWS
+
+1. Crie uma instância EC2 na AWS
+2. Configure as regras de segurança para as portas 80 e 443
+3. Instale o Docker e Docker Compose na instância
+4. Clone o repositório e configure as variáveis de ambiente
+5. Execute o Docker Compose
+
+```bash
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+## 🔒 Variáveis de Ambiente
+
+```env
+# Backend
+SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/agenda
+SPRING_DATASOURCE_USERNAME=postgres
+SPRING_DATASOURCE_PASSWORD=senha
+JWT_SECRET=your-secret-key
+
+# Frontend
+API_URL=http://localhost:8080/api
+```
+
+## 📚 Documentação da API
+
+A documentação da API está disponível através do Swagger UI em:
+`http://localhost:8080/swagger-ui.html`
+
+## 🤝 Como Contribuir
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Faça commit das suas alterações (`git commit -m 'Add some AmazingFeature'`)
+4. Faça push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## ✅ Testes
+
+### Backend
+```bash
+mvn test
+```
+
+### Frontend
+```bash
+ng test
+```
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👨‍💻 Autor
+
+LinkedIn: - https://www.linkedin.com/in/josé-carlos-carneiro/
+
+## 🙏 Agradecimentos
+
+- Agradeça aqui pessoas ou recursos que te ajudaram no desenvolvimento
