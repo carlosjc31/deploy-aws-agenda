@@ -168,6 +168,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 LinkedIn: - https://www.linkedin.com/in/josé-carlos-carneiro/
 
-## 🙏 Agradecimentos
 
-- Agradeça aqui pessoas ou recursos que te ajudaram no desenvolvimento
